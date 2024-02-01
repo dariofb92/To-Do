@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href ="css/estilo.css">
+</head>
+<body>
+   <h1>To-do List</h1> 
+   <form action = "#"  id="userInput">
+        <input type="text"  id ="inputText" placeholder="Escribe tu tarea aquí..." autofocus>
+        <input type="submit" value="+" id="addBtn">
+
+   </form>
+
+   <div id ="list"  class="list-container">  
+    <!--estos div los generamos automáticamente con js,
+    cada bloque div, será una tarea-->
+         <!--<div class = "task-container" id="1">
+            <label>
+                <input type = "checkbox">
+                Tarea 1
+            </label>
+            <img src = "img/cubo-de-basura.webp" class="close-btn">
+        </div>-->
+    </div>
+      <!--Estadísticas de la lista de tareas-->
+      <div id = "stats">
+       <!--Tareas Pendientes: 5 tareas completadas: 3-->
+      </div>
+      <footer>
+        <p>Desarrollo de Aplicaciones con Tecnología Web | Darío Fernández Bravo </p>
+        <p id="fecha"></p>
+      </footer>
+       
+
+
+
+
+
+
+
+
+   <script src = "js/prueba.js"></script>
+   <script>
+        //obtener la fecha actual
+        var fechaActual = new Date ();
+        //obtener elementos DOM
+        var fechaElemento = document.getElementById ('fecha');
+        //formatear la fecha 
+        var formatoFecha = fechaActual.getDate() + '/'+ (fechaActual.getMonth() <10 ? '0' : '') + (fechaActual.getMonth()+1) + '/' +fechaActual.getFullYear();
+
+        //asignar la fecha al elemento
+        fechaElemento.innerHTML='Fecha: ' + formatoFecha;
+
+
+
+
+
+   </script>
+</body>
+</html>
